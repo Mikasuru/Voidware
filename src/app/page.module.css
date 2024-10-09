@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'NType82';
+  src: url('../../public/fonts/ntype82.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NType82Headline';
+  src: url('../../public/fonts/ntype82_headline.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+  --button-primary-hover: #1078FF;
+  --button-secondary-hover: #f2f2f2;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #000000;
+  color: #fff;
+  font-family: var(--font-geist-sans);
+}
+
+.largeFont { 
+  font-size: 32px;
+  font-family: 'NType82Headline', sans-serif; 
+  color: #fff; 
+}
+
+.header {
+  padding: 20px 80px;
+}
+
+.header ul li {
+  font-family: 'NType82', sans-serif;
+  color: #fff;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.leftSection {
+  flex: 0 0 66%;
+  position: relative;
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.rightSection {
+  flex: 0 0 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.title {
+  font-weight: 300;
+  font-size: 36px;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.cta {
+  align-self: flex-start;
+  border-radius: 128px;
+  height: 48px;
+  padding: 0 200px;
+  border: none;
+  background-color: #f1f1f1;
+  color: #000000; 
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s; 
+}
+
+.cta:hover {
+  background-color: #1078FF;
+  color: #ffffff; 
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .leftSection, .rightSection {
+    flex: 0 0 100%;
+  }
+
+  .leftSection {
+    height: 50vh;
+  }
+
+  .rightSection {
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cta {
+    align-self: center;
+  }
+}
